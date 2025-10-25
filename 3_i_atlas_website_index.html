@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3I/ATLAS – The Future Approaches</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at 20% 20%, #000010, #000);
+      color: #e0e0ff;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .lang-switch {
+      cursor: pointer;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    h1, h2 {
+      text-transform: uppercase;
+      color: #8ab4ff;
+    }
+    .slogan {
+      font-size: 1.4rem;
+      color: #c0c8ff;
+      margin-top: -10px;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .roadmap, .tokenomics {
+      display: grid;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .roadmap div, .tokenomics div {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="3I/ATLAS Logo">
+    <div class="lang-switch" onclick="toggleLang()">EN | TR</div>
+  </header>
+
+  <section id="hero">
+    <h1 id="title">3I/ATLAS</h1>
+    <p class="slogan" id="slogan">The Future Approaches. Beyond Limits. Beyond Earth.</p>
+  </section>
+
+  <section id="about">
+    <h2 id="aboutTitle">About 3I/ATLAS</h2>
+    <p class="content" id="aboutText">Born from cosmic discovery, 3I/ATLAS represents exploration, innovation, and limitless potential in the new frontier of decentralized finance.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2 id="roadmapTitle">Roadmap</h2>
+    <div class="roadmap">
+      <div id="r1"><strong>Launch:</strong> Token release and initial community formation.</div>
+      <div id="r2"><strong>Expansion:</strong> Strategic partnerships and early utility integration.</div>
+      <div id="r3"><strong>Integration:</strong> Ecosystem growth and NFT/AI module implementation.</div>
+      <div id="r4"><strong>Beyond:</strong> Cross-chain and metaverse deployment.</div>
+    </div>
+  </section>
+
+  <section id="tokenomics">
+    <h2 id="tokenTitle">Tokenomics</h2>
+    <div class="tokenomics">
+      <div id="t1"><strong>Total Supply:</strong> 1,000,000,000 3IA</div>
+      <div id="t2"><strong>Distribution:</strong> 40% Community, 30% Development, 20% Partnerships, 10% Reserve</div>
+      <div id="t3"><strong>Utility:</strong> Governance, staking, and ecosystem access</div>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2 id="joinTitle">Join the Mission</h2>
+    <p class="content" id="joinText">Follow 3I/ATLAS across galaxies of innovation. Subscribe for early access and exclusive updates.</p>
+  </section>
+
+  <footer>
+    <p id="footerText">© 2025 3I/ATLAS – The Future Approaches.</p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+
+    const texts = {
+      en: {
+        slogan: 'The Future Approaches. Beyond Limits. Beyond Earth.',
+        aboutTitle: 'About 3I/ATLAS',
+        aboutText: 'Born from cosmic discovery, 3I/ATLAS represents exploration, innovation, and limitless potential in the new frontier of decentralized finance.',
+        roadmapTitle: 'Roadmap',
+        r1: 'Launch: Token release and initial community formation.',
+        r2: 'Expansion: Strategic partnerships and early utility integration.',
+        r3: 'Integration: Ecosystem growth and NFT/AI module implementation.',
+        r4: 'Beyond: Cross-chain and metaverse deployment.',
+        tokenTitle: 'Tokenomics',
+        t1: 'Total Supply: 1,000,000,000 3IA',
+        t2: 'Distribution: 40% Community, 30% Development, 20% Partnerships, 10% Reserve',
+        t3: 'Utility: Governance, staking, and ecosystem access',
+        joinTitle: 'Join the Mission',
+        joinText: 'Follow 3I/ATLAS across galaxies of innovation. Subscribe for early access and exclusive updates.',
+        footerText: '© 2025 3I/ATLAS – The Future Approaches.'
+      },
+      tr: {
+        slogan: 'Gelecek Yaklaşıyor. Sınırların Ötesinde. Dünyanın Ötesinde.',
+        aboutTitle: '3I/ATLAS Hakkında',
+        aboutText: 'Kozmik keşiflerden doğan 3I/ATLAS, merkeziyetsiz finansın yeni sınırında keşfi, yeniliği ve sınırsız potansiyeli temsil eder.',
+        roadmapTitle: 'Yol Haritası',
+        r1: 'Lansman: Token yayını ve ilk topluluk oluşumu.',
+        r2: 'Genişleme: Stratejik ortaklıklar ve erken fayda entegrasyonu.',
+        r3: 'Entegrasyon: Ekosistem büyümesi ve NFT/AI modül uygulaması.',
+        r4: 'Ötesi: Zincirler arası ve metaverse entegrasyonu.',
+        tokenTitle: 'Tokenomik Yapı',
+        t1: 'Toplam Arz: 1.000.000.000 3IA',
+        t2: 'Dağılım: %40 Topluluk, %30 Geliştirme, %20 Ortaklıklar, %10 Rezerv',
+        t3: 'Kullanım: Yönetişim, staking ve ekosistem erişimi',
+        joinTitle: 'Göreve Katıl',
+        joinText: '3I/ATLAS’ın inovasyon galaksilerindeki yolculuğunu takip et. Erken erişim ve özel güncellemeler için abone ol.',
+        footerText: '© 2025 3I/ATLAS – Gelecek Yaklaşıyor.'
+      }
+    };
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'tr' : 'en';
+      document.querySelector('.lang-switch').textContent = currentLang === 'en' ? 'EN | TR' : 'TR | EN';
+      const langData = texts[currentLang];
+      for (const key in langData) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = langData[key];
+      }
+    }
+  </script>
+</body>
+</html>
